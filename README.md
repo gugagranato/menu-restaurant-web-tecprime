@@ -16,7 +16,7 @@ You can download Git [here](https://git-scm.com/downloads) and Docker [here](htt
 
 ### Demo
 
-[![Video](https://drive.google.com/file/d/10AHneMCEazzJ_VXdh8BDuFwQXVHwR6fc/view?usp=sharing)](https://youtu.be/vt5fpE0bzSY)
+[![Video](https://github.com/gugagranato/menu-restaurant-web-tecprime/blob/master/src/assets/tecprime.png)](https://github.com/gugagranato/menu-restaurant-web-tecprime/blob/master/src/assets/video/Nova%20guia%20-%20Google%20Chrome%202020-10-07%2014-06-57.mp4)
 
 ### Authors
 
