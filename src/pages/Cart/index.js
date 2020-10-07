@@ -115,7 +115,6 @@ function Cart() {
   }
 
   function onChangeQuantity(i, type) {
-
     const dataCart = currentCart;
     let quant = dataCart[i].quantity;
 
@@ -136,6 +135,16 @@ function Cart() {
       localStorage.setItem('cart', JSON.stringify(dataCart))
       setCurrentCart(dataCart)
     }
+  }
+
+  const onLoadTotal = () => {
+    let total = 0;
+
+    const cart = currentCart;
+    for (var i = 0; i < cart.length; i++) {
+      total = total + (cart[i].food.price * cart[i].quantity)
+    }
+    return total
   }
 
   return (
@@ -201,7 +210,7 @@ function Cart() {
                       </Button>
 
 
-                      <p style={{ fontWeight: 600 }}>R$ {item.food.price}</p>
+                      <p style={{ fontWeight: 600 }}>R$ {item.food.price * item.quantity}</p>
                     </div>
 
                   </WrapperDetails>
@@ -225,13 +234,13 @@ function Cart() {
                     Total:
                 </div>
                   <div>
-                    <ButtonConfirm onClick={() => handleConfirm()}>
+                    <ButtonConfirm onClick={() => handleConfirm()} >
                       <MdAttachMoney size={22} />
                     Finalizar pedido
                   </ButtonConfirm>
                   </div>
                   <div>
-                    R$ {item.quantity}
+                    R$ {onLoadTotal()}
                   </div>
                 </WrapperTotal>
               </ContainerTotal>
