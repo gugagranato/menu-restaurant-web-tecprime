@@ -14,8 +14,8 @@ You can download Git [here](https://git-scm.com/downloads) and Docker [here](htt
 - Run the project
 `yarn start` or `npm start`
 
-### Demo
-**Clique na imagem**
+### Demo (Clique na imagem)
+
 [![Video](https://github.com/gugagranato/menu-restaurant-web-tecprime/blob/master/src/assets/tecprime.png)](https://drive.google.com/file/d/1Axtz3-0arbpr3Gp3ioPvLFT_RjrHTsrb/view?usp=sharing)
 
 ### Authors
