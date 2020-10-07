@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
-import { Link, useHistory } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import { v4 as uuidv4 } from 'uuid';
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,7 +9,6 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
 import Header from '../../components/Header';
-import Banner from '../../components/Banner'
 import CardMenu from '../../components/CardMenu';
 
 import bannerImg from '../../assets/banner-4.jpg'
@@ -33,12 +31,10 @@ const useStyles = makeStyles((theme) => ({
 const Dashboard = () => {
   const classes = useStyles();
 
-  const history = useHistory();
 
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [selectCategories, setSelectCategories] = useState(0);
-  const [loading, setLoading] = useState(false);
   const [baseUrl, setBaseUrl] = useState('');
   const [loadAllItens, setloadAllItens] = useState(false);
   const [loadCategoriesSelected, setLoadCategoriesSelected] = useState(false);
@@ -84,19 +80,8 @@ const Dashboard = () => {
     if (dataCart !== null) {
 
       const cart = JSON.parse(dataCart);
-
-
-      // const newCart = cart.map((cartItem, index) => {
-      //   if (cartItem.quantity > 0) {
-      //     return { ...itemCart, quantity: itemCart.quantity + 1 };
-
-      //   }
-      //   console.log('novos valores', cartItem)
-      // });
-
       cart.push(itemCart);
       localStorage.setItem('cart', JSON.stringify(cart))
-      // localStorage.setItem('cart', JSON.stringify(cart))
 
       toast.success('🔥 Produto adicionado com sucesso', {
         position: "top-right",
@@ -131,7 +116,7 @@ const Dashboard = () => {
       <Header />
       {/* <Banner /> */}
       <BannerContainer >
-        <img src={bannerImg} width={'100%'} />
+        <img src={bannerImg} width={'100%'} alt="BannerFood" />
       </BannerContainer>
       <TitleCategories>Categorias</TitleCategories>
       <div style={{ display: 'flex', justifyContent: 'center' }} >
@@ -139,10 +124,9 @@ const Dashboard = () => {
           return (
             <div key={item.id} style={{ margin: 5 }}>
               <button
-                // onClick={() => handleSubmit(item.id)}
                 onClick={() => handleteste(item.id)}
               >
-                <img src={baseUrl + item.image.url} style={{ width: 140, height: 100 }} />
+                <img alt="TestTecprime" src={baseUrl + item.image.url} style={{ width: 140, height: 100 }} />
               </button>
               <p>{item.name}</p>
             </div>
@@ -168,7 +152,7 @@ const Dashboard = () => {
                 return (
                   <Grid key={event.id} item xs={3}>
                     <Paper className={classes.paper}>
-                      <img src={baseUrl + event.image.url} style={{ width: 140, height: 100 }} />
+                      <img alt="TestTecprime" src={baseUrl + event.image.url} style={{ width: 140, height: 100 }} />
                       <p>{event.name}</p>
                       <p>{event.price}</p>
                       <Button style={{ height: 30, marginRight: 10, marginTop: 5 }} variant="outlined" color="primary" onClick={() => onClickAddCart(event)}>
@@ -192,7 +176,7 @@ const Dashboard = () => {
           }).map(event => (
             <Grid key={event.id} item xs={3}>
               <Paper className={classes.paper}>
-                <img src={baseUrl + event.image.url} style={{ width: 140, height: 100 }} />
+                <img alt="TestTecprime" src={baseUrl + event.image.url} style={{ width: 140, height: 100 }} />
                 <p>{event.name}</p>
                 <p>{event.price}</p>
                 <Button style={{ height: 30, marginRight: 10, marginTop: 5 }} variant="outlined" color="primary" onClick={() => onClickAddCart(event)}>

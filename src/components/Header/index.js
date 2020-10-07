@@ -85,7 +85,7 @@ function Header() {
     <>
       <Container>
         <ContainerLogo>
-          <img src={logo} style={{
+          <img alt="TestTecprime" src={logo} style={{
             width: '250px',
             marginTop: '25px'
           }} />
@@ -123,7 +123,7 @@ function Header() {
             <TitleModal id="transition-modal-title">O Desafio</TitleModal>
             <TitleDescription id="transition-modal-description">O objetivo deste desafio é criar uma aplicação que <strong>apresente o cardápio de uma lanchonete</strong> e permita ao cliente <strong>fazer um pedido.</strong></TitleDescription>
             <TitleDescription id="transition-modal-description">Ao entrar, o usuário deverá visualizar as categorias de produtos e, ao clicar em uma categoria, deverá visualizar os produtos dessa categoria.</TitleDescription>
-            <img src="https://i.pinimg.com/originals/89/ef/54/89ef54ef1f4de939d6f22e3fb7033330.gif" width="160px" style={{ marginTop: 10, marginBottom: 10 }} />
+            <img alt="TestTecprime" src="https://i.pinimg.com/originals/89/ef/54/89ef54ef1f4de939d6f22e3fb7033330.gif" width="160px" style={{ marginTop: 10, marginBottom: 10 }} />
           </ContainerModal>
         </Fade>
       </Modal>
@@ -176,8 +176,8 @@ function Header() {
               <a href={linkedin}>
                 <IoLogoLinkedin size={20} style={{ marginRight: 4 }} />
                 LinkedIn</a>
-              <a href={linkedin}><FiGithub size={20} style={{ marginRight: 4 }} />GitHub</a>
-              <a href={linkedin}><IoMdPaper size={20} style={{ marginRight: 4 }} />Currículo</a>
+              <a href={github}><FiGithub size={20} style={{ marginRight: 4 }} />GitHub</a>
+              <a href={cv}><IoMdPaper size={20} style={{ marginRight: 4 }} />Currículo</a>
             </ContainerSocial>
           </ContainerModal>
         </Fade>
