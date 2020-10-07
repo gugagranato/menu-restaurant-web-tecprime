@@ -14,7 +14,11 @@ You can download Git [here](https://git-scm.com/downloads) and Docker [here](htt
 - Run the project
 `yarn start` or `npm start`
 
-**Necessary** 
+**The project is hosted at Ocean Digital, to switch to localhost change the baseURL at:**
+`services/api`
+To be commented
+
+**To run localhost it is necessary:**
 
 Is important running first backend. Explain [**HERE**](https://github.com/gugagranato/api-job-tecprime)
 ### Demo (Clique na imagem)
